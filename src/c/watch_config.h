@@ -18,7 +18,14 @@
 //#define QUIET_TIME_IMAGE_GRECT GRect(20, 20, 20, 20)  // Example assumes a 20x20 image
 #define BT_DISCONNECT_IMAGE RESOURCE_ID_IMAGE_BT_DISCONNECT
 
+#define BG_IMAGE RESOURCE_ID_IMAGE_MAIN
+#define IMAGE_RES_X 144  // NOTE if image res changes - this needs to change too!
+#define IMAGE_RES_Y 161  // NOTE if image res changes - this needs to change too!
+
 #ifdef PBL_ROUND /* 180x180 */
+    /* Image at top of screen, centered horizontally */
+    #define BG_IMAGE_GRECT GRect((180 - IMAGE_RES_X) / 2, 0, IMAGE_RES_X, IMAGE_RES_Y)
+
     #define QUIET_TIME_IMAGE_GRECT GRect(17, 48, 17, 17)  // TODO consider placing in top of screen/circle
 /*TODO center/move right*/
     #define CLOCK_POS GRect(0, 52, 180, 180) /* probably taller than really needed */
@@ -36,6 +43,9 @@
     #endif /* DRAW_BATTERY */
 
 #else /* PBL_RECT 144x168*/
+    /* Clock at top of screen, Image below and centered horizontally */
+    #define BG_IMAGE_GRECT GRect((144 - IMAGE_RES_X) / 2, 35,  IMAGE_RES_X, IMAGE_RES_Y)  // use same size as image. On Aplite can determine this at runtime but not Basalt
+
     #define QUIET_TIME_IMAGE_GRECT GRect(3, 35, 14, 14)  // 14x14 image
     #define HEALTH_POS GRect(0, 40, 144, 168)
     //#define BT_POS GRect(0, 120, 144, 168) /* probably taller than really needed */
