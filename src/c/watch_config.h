@@ -37,15 +37,27 @@
 
 #else /* PBL_RECT 144x168*/
     #define QUIET_TIME_IMAGE_GRECT GRect(3, 35, 14, 14)  // 14x14 image
-    #define CLOCK_POS GRect(0, 52, 144, 168) /* probably taller than really needed */
     #define HEALTH_POS GRect(0, 40, 144, 168)
-    #define BT_POS GRect(0, 120, 144, 168) /* probably taller than really needed */
-    #define DATE_POS GRect(0, 140, 144, 168) /* probably taller than really needed */
+    //#define BT_POS GRect(0, 120, 144, 168) /* probably taller than really needed */
+    //#define DATE_POS GRect(0, 140, 144, 168) /* probably taller than really needed */
+
+    #define BAT_POS GRect(0, 35, 144, 168) /* probably taller than really needed */
+    /*
     #ifdef DRAW_BATTERY
         #define BAT_POS GRect(5, 150, 144, 168)
     #else
-        #define BAT_POS GRect(0, 140, 144, 168) /* probably taller than really needed */
-    #endif /* DRAW_BATTERY */
+        #define BAT_POS GRect(0, 140, 144, 168) // probably taller than really needed
+    #endif // DRAW_BATTERY
+    */
+
+    #define CLOCK_POS GRect(0, -15, 144, 168) // top of screen for FONT_KEY_ROBOTO_BOLD_SUBSET_49
+
+    //#define BT_DISCONNECT_IMAGE_GRECT GRect(144 - 20, 138, 20, 30)
+    #define BT_DISCONNECT_IMAGE_GRECT GRect(144 - 20, 168 - (2 * 30 + 4), 20, 30)
+
+    #define BT_POS GRect(0, 120, 144, 168) /* probably taller than really needed */
+    #define DATE_POS GRect(0, 35, 144, 168) /* probably taller than really needed */
+
 #endif /* end of Round or rectangle */
 
 /* for screen shots and font testing
