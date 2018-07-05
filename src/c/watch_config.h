@@ -14,10 +14,12 @@
 #define DRAW_BATTERY
 #define DRAW_SMALL_BATTERY
 
-//#define QUIET_TIME_IMAGE RESOURCE_ID_IMAGE_QUIET_TIME
+#define QUIET_TIME_IMAGE RESOURCE_ID_IMAGE_QUIET_TIME
 //#define QUIET_TIME_IMAGE_GRECT GRect(20, 20, 20, 20)  // Example assumes a 20x20 image
+#define BT_DISCONNECT_IMAGE RESOURCE_ID_IMAGE_BT_DISCONNECT
 
 #ifdef PBL_ROUND /* 180x180 */
+    #define QUIET_TIME_IMAGE_GRECT GRect(17, 48, 17, 17)  // TODO consider placing in top of screen/circle
 /*TODO center/move right*/
     #define CLOCK_POS GRect(0, 52, 180, 180) /* probably taller than really needed */
     #define HEALTH_POS GRect(0, 40, 180, 180)
@@ -34,6 +36,7 @@
     #endif /* DRAW_BATTERY */
 
 #else /* PBL_RECT 144x168*/
+    #define QUIET_TIME_IMAGE_GRECT GRect(3, 35, 14, 14)  // 14x14 image
     #define CLOCK_POS GRect(0, 52, 144, 168) /* probably taller than really needed */
     #define HEALTH_POS GRect(0, 40, 144, 168)
     #define BT_POS GRect(0, 120, 144, 168) /* probably taller than really needed */
