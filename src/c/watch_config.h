@@ -46,8 +46,8 @@
     /* Clock at top of screen, Image below and centered horizontally */
     #define BG_IMAGE_GRECT GRect((144 - IMAGE_RES_X) / 2, 35,  IMAGE_RES_X, IMAGE_RES_Y)  // use same size as image. On Aplite can determine this at runtime but not Basalt
 
-    #define QUIET_TIME_IMAGE_GRECT GRect(3, 35, 14, 14)  // 14x14 image
-    #define HEALTH_POS GRect(0, 40, 144, 168)
+    #define QUIET_TIME_IMAGE_GRECT GRect(3, 45, 14, 14)  // 14x14 image
+    #define HEALTH_POS GRect(0, 50, 144, 168)
     //#define BT_POS GRect(0, 120, 144, 168) /* probably taller than really needed */
     //#define DATE_POS GRect(0, 140, 144, 168) /* probably taller than really needed */
 
